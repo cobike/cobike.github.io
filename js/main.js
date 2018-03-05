@@ -1,20 +1,12 @@
 $(document).ready(function(){
-  $('a.nav-link').on('click', function(){
-    var scrollTo = $(this).attr('data-scrollTo');
-    
-    var top = ($('.content-nav').offset() || { "top": NaN }).top;
-    if (isNaN(top)) {
-        alert("something is wrong, no top");
-    } else {
-        alert(top);
-    }
-
-    $('body, html').animate({
-
-      "scrollTop": $(''+scrollTo).offset().top
-    }, 1000 );
-    return false;
-
+   $('a[href^="#"]').on('click', function(event) {
+      var target = $(this.getAttribute('href'));
+      if( target.length ) {
+          event.preventDefault();
+          $('html, body').stop().animate({
+              scrollTop: target.offset().top
+          }, 1000);
+      }
   })
 })
 /*
