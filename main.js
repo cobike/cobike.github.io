@@ -1,10 +1,12 @@
-$('a.nav-link').on('click', function(){
-  var scrollTo = $(this).attr('data-scrollTo');
+$(document).ready(function){
+  $('a.nav-link').on('click', function(){
+    var scrollTo = $(this).attr('data-scrollTo');
 
-  $('body, html').animate({
+    $('body, html').animate({
 
-    "scrollTop": $('#'+scrollTo).offset().top
-  }, 1000 );
-  return false;
+      "scrollTop": $('#'+scrollTo).offset().top
+    }, 1000 );
+    return false;
 
-});
+  });
+};
