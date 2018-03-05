@@ -1,6 +1,13 @@
 $(document).ready(function(){
   $('a.nav-link').on('click', function(){
     var scrollTo = $(this).attr('data-scrollTo');
+    
+    var top = ($('.content-nav').offset() || { "top": NaN }).top;
+    if (isNaN(top)) {
+        alert("something is wrong, no top");
+    } else {
+        alert(top);
+    }
 
     $('body, html').animate({
 
