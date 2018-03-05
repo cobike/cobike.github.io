@@ -1,4 +1,4 @@
-$(document).ready(function){
+$(document).ready(function(){
   $('a.nav-link').on('click', function(){
     var scrollTo = $(this).attr('data-scrollTo');
 
