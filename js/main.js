@@ -1,16 +1,16 @@
-/*$(document).ready(function(){
+$(document).ready(function(){
   $('a.nav-link').on('click', function(){
     var scrollTo = $(this).attr('data-scrollTo');
 
     $('body, html').animate({
 
-      "scrollTop": $('#'+scrollTo).offset().top
+      "scrollTop": $(''+scrollTo).offset().top
     }, 1000 );
     return false;
 
   })
-})*/
-
+})
+/*
 $(document).ready(function(){
   
   // handle links with @href started with '#' only
@@ -33,4 +33,4 @@ $(document).ready(function(){
       // animated top scrolling
       $('body, html').animate({scrollTop: pos});
   })
-})
+})*/
